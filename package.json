@@ -1,0 +1,26 @@
+{
+  "name": "softsend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/app.css --minify",
+    "dev": "tailwindcss -i ./assets/css/input.css -o ./assets/css/app.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/achandrianrr-glitch/pengiriman.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/achandrianrr-glitch/pengiriman/issues"
+  },
+  "homepage": "https://github.com/achandrianrr-glitch/pengiriman#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  }
+}

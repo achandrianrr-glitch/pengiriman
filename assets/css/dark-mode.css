@@ -1,0 +1,90 @@
+:root {
+  --bg-primary: #f9fafb;
+  --bg-secondary: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border: #e5e7eb;
+}
+
+html.dark {
+  --bg-primary: #0f1829;
+  --bg-secondary: #243352;
+  --text-primary: #f0f4f8;
+  --text-secondary: #a8b5c4;
+  --border: #3d4f6f;
+}
+
+/* Global apply */
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.card {
+  background: var(--bg-secondary);
+  border-color: var(--border);
+}
+
+.navbar {
+  background: var(--bg-secondary);
+  border-bottom-color: var(--border);
+}
+
+/* =========================
+   Dark Mode: Sidebar
+   ========================= */
+html.dark .sidebar {
+  /* opsi 1: solid dark (recommended) */
+  background: #111b2e;
+  color: #F0F4F8;
+}
+
+/* kalau kamu mau tetap gradient tapi dark:
+html.dark .sidebar {
+  background: linear-gradient(180deg, #0F172A, #111827);
+  color: #F0F4F8;
+}
+*/
+
+html.dark .sidebar-header {
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+html.dark .sidebar-footer {
+  border-top: 1px solid rgba(255,255,255,0.10);
+}
+
+html.dark .sidebar-title p,
+html.dark .sidebar-meta {
+  opacity: 0.9;
+}
+
+/* menu item & button */
+html.dark .sidebar-menu-item,
+html.dark .sidebar-menu-button {
+  color: #F0F4F8;
+}
+
+/* icon background supaya nggak “nyolok” */
+html.dark .menu-icon,
+html.dark .sidebar-menu-button .menu-arrow {
+  background: rgba(255,255,255,0.08);
+}
+
+/* hover & active state */
+html.dark .sidebar-menu-item:hover,
+html.dark .sidebar-menu-button:hover,
+html.dark .submenu a:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+html.dark .sidebar-menu-item.active,
+html.dark .submenu a.active {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.16);
+}
+
+/* submenu text */
+html.dark .submenu a {
+  color: rgba(240,244,248,0.95);
+}
