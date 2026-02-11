@@ -74,7 +74,7 @@ $logoUrl = file_exists($logoFsSmkn4) ? $logoUrlSmkn4 : $logoUrlOld;
                     font-weight:600;
                     color: rgba(255,255,255,.88);
                     font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Inter, Arial, 'Noto Sans', 'Liberation Sans', sans-serif;">
-                    SMKN 4 Malang • Admin
+                    SMKN 4 Malang •
                 </p>
             </div>
         </a>

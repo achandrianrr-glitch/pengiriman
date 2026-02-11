@@ -12,6 +12,8 @@ if (!empty($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
     exit;
 }
 
+$base = rtrim(BASE_URL, '/') . '/';
+
 $admin_email_wajib = 'adminsoft@gmail.com';
 $error = '';
 $info = '';
@@ -124,7 +126,6 @@ $email_value = '';
 if (isset($_POST['email'])) {
     $email_value = htmlspecialchars((string)$_POST['email'], ENT_QUOTES, 'UTF-8');
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -136,7 +137,7 @@ if (isset($_POST['email'])) {
 
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="assets/css/auth.css">
+    <link rel="stylesheet" href="<?= $base ?>assets/css/auth.css">
 </head>
 
 <body class="auth-body">
@@ -147,13 +148,37 @@ if (isset($_POST['email'])) {
 
     <div class="auth-wrapper">
         <div class="auth-card" role="region" aria-label="Form Login">
+
+            <!-- BRAND: 2 logo kiri & kanan (grid) -->
             <div class="auth-brand">
-                <div class="auth-logo">
-                    <span class="auth-logo-dot"></span>
+                <!-- KIRI: SMKN 4 MALANG -->
+                <div class="brand-item brand-left">
+                    <div class="brand-logo">
+                        <img
+                            src="<?= $base ?>assets/img/logo-grafika.png"
+                            alt="Logo SMKN 4 Malang"
+                            loading="eager"
+                            decoding="async">
+                    </div>
+                    <div class="brand-text">
+                        <h1 class="brand-title">SMKN 4 Malang</h1>
+                        <p class="brand-subtitle">Sekolah</p>
+                    </div>
                 </div>
-                <div>
-                    <h1 class="auth-title"><?= htmlspecialchars(APP_NAME, ENT_QUOTES, 'UTF-8') ?></h1>
-                    <p class="auth-subtitle">Manajemen Pengiriman</p>
+
+                <!-- KANAN: SOFTSEND -->
+                <div class="brand-item brand-right">
+                    <div class="brand-text">
+                        <h1 class="brand-title"><?= htmlspecialchars(APP_NAME, ENT_QUOTES, 'UTF-8') ?></h1>
+                        <p class="brand-subtitle">Manajemen Pengiriman</p>
+                    </div>
+                    <div class="brand-logo">
+                        <img
+                            src="<?= $base ?>assets/img/logo.png"
+                            alt="Logo SoftSend"
+                            loading="eager"
+                            decoding="async">
+                    </div>
                 </div>
             </div>
 
@@ -172,6 +197,7 @@ if (isset($_POST['email'])) {
             <?php endif; ?>
 
             <form id="loginForm" method="POST" action="<?= BASE_URL ?>?page=login" novalidate>
+
                 <div class="auth-field">
                     <label for="email" class="auth-label">Email</label>
                     <div class="auth-input-wrap">
@@ -228,10 +254,11 @@ if (isset($_POST['email'])) {
                     <p class="auth-muted">Versi <?= htmlspecialchars(APP_VERSION, ENT_QUOTES, 'UTF-8') ?></p>
                 </div>
             </form>
+
         </div>
     </div>
 
-    <script src="assets/js/auth.js"></script>
+    <script src="<?= $base ?>assets/js/auth.js"></script>
 </body>
 
 </html>

@@ -30,6 +30,9 @@
 
   --icon-left: 46px;
   --toggle-w: 52px;
+
+  /* brand header */
+  --brand-logo-size: 62px;
 }
 
 *,
@@ -62,7 +65,7 @@ body.auth-body {
 .auth-bg {
   position: fixed;
   inset: 0;
-  background-image: url("../img/monyet.jpg");
+  background-image: url("../img/backrgound.jpg");
   background-size: cover;
   background-position: center;
   transform: scale(1.02);
@@ -116,48 +119,83 @@ body.auth-body {
   }
 }
 
+/* =========================
+   BRAND HEADER (2 LOGO GRID)
+   ========================= */
 .auth-brand {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 14px;
+  align-items: center;
   margin-bottom: var(--space-3);
 }
 
-.auth-logo {
-  width: 48px;
-  height: 48px;
-  border-radius: 16px;
-  background: linear-gradient(
-    135deg,
-    var(--softsend-blue),
-    var(--softsend-pink)
-  );
-  position: relative;
-  box-shadow: 0 10px 24px rgba(107, 159, 212, 0.35);
+.brand-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.brand-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.brand-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.brand-logo {
+  width: var(--brand-logo-size);
+  height: var(--brand-logo-size);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  box-shadow: 0 10px 24px rgba(17, 24, 39, 0.1);
+  overflow: hidden;
   flex: 0 0 auto;
+  display: grid;
+  place-items: center;
 }
 
-.auth-logo-dot {
-  position: absolute;
-  inset: 12px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.85);
+.brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 7px;
+  display: block;
 }
 
-.auth-title {
-  font-size: 22px;
-  font-weight: 800;
-  line-height: 1.15;
+.brand-text {
+  min-width: 0;
+}
+
+.brand-title {
   margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.3px;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.auth-subtitle {
-  margin: 3px 0 0 0;
+.brand-subtitle {
+  margin: 4px 0 0 0;
+  font-size: 12.5px;
+  font-weight: 750;
   color: var(--muted);
-  font-size: 14px;
-  line-height: 1.35;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+/* Alert */
 .auth-alert {
   display: flex;
   align-items: flex-start;
@@ -281,7 +319,6 @@ body.auth-body {
 .auth-toggle:hover {
   background: rgba(107, 159, 212, 0.12);
 }
-
 .auth-toggle:active {
   transform: translateY(-50%) scale(0.98);
 }
@@ -355,7 +392,6 @@ body.auth-body {
 .auth-btn:active {
   transform: translateY(0) scale(0.99);
 }
-
 .auth-btn:disabled {
   opacity: 0.75;
   cursor: not-allowed;
@@ -406,6 +442,7 @@ body.auth-body {
     --input-h: 56px;
     --btn-h: 56px;
     --card-max: 520px;
+    --brand-logo-size: 58px;
   }
 
   .auth-card {
@@ -413,8 +450,19 @@ body.auth-body {
     padding: 20px;
   }
 
-  .auth-title {
-    font-size: 20px;
+  /* stack agar tidak mepet/pecah di layar kecil */
+  .auth-brand {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .brand-right {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .brand-title {
+    font-size: 17px;
   }
 }
 
