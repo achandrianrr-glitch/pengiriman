@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 11, 2026 at 12:07 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Waktu pembuatan: 11 Feb 2026 pada 20.44
+-- Versi server: 10.4.32-MariaDB
+-- Versi PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Struktur dari tabel `admin`
 --
 
 CREATE TABLE `admin` (
@@ -38,7 +38,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `admin`
+-- Dumping data untuk tabel `admin`
 --
 
 INSERT INTO `admin` (`id`, `nama_lengkap`, `email`, `password`, `foto_profil`, `created_at`, `updated_at`) VALUES
@@ -47,7 +47,7 @@ INSERT INTO `admin` (`id`, `nama_lengkap`, `email`, `password`, `foto_profil`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pengaturan`
+-- Struktur dari tabel `pengaturan`
 --
 
 CREATE TABLE `pengaturan` (
@@ -66,7 +66,7 @@ CREATE TABLE `pengaturan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `pengaturan`
+-- Dumping data untuk tabel `pengaturan`
 --
 
 INSERT INTO `pengaturan` (`id`, `nama_perusahaan`, `alamat`, `telepon`, `email`, `logo`, `biaya_asuransi_persen`, `biaya_packing_kecil`, `biaya_packing_sedang`, `biaya_packing_besar`, `created_at`, `updated_at`) VALUES
@@ -75,7 +75,7 @@ INSERT INTO `pengaturan` (`id`, `nama_perusahaan`, `alamat`, `telepon`, `email`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pengiriman`
+-- Struktur dari tabel `pengiriman`
 --
 
 CREATE TABLE `pengiriman` (
@@ -122,18 +122,19 @@ CREATE TABLE `pengiriman` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `pengiriman`
+-- Dumping data untuk tabel `pengiriman`
 --
 
 INSERT INTO `pengiriman` (`id`, `nomor_resi`, `admin_id`, `tanggal_kirim`, `status`, `pengirim_nama`, `pengirim_telepon`, `pengirim_alamat`, `pengirim_kota`, `pengirim_kecamatan`, `pengirim_kelurahan`, `pengirim_kodepos`, `penerima_nama`, `penerima_telepon`, `penerima_alamat`, `penerima_kota`, `penerima_kecamatan`, `penerima_kelurahan`, `penerima_kodepos`, `barang_jenis`, `barang_berat_kg`, `barang_panjang_cm`, `barang_lebar_cm`, `barang_tinggi_cm`, `barang_nilai`, `barang_catatan`, `jenis_layanan`, `biaya_pengiriman`, `biaya_asuransi`, `biaya_packing`, `biaya_tambahan`, `total_biaya`, `metode_pembayaran`, `status_pembayaran`, `estimasi_sampai`, `tanggal_sampai`, `dibatalkan_pada`, `alasan_batal`, `created_at`, `updated_at`) VALUES
 (30, 'SS-260211-0001', 1, '2026-02-11', 'Diproses', 'Fitri', '0895342227528', 'jl ngaglik IV B / 30 RT.04 RW.09', 'Jawa Timur', 'Kota Malang', 'Sukun', '23456', 'Fitri', '0895342227528', 'jl ngaglik IV B / 30 RT.04 RW.09', 'Jawa Timur', 'Kota Malang', 'Sukun', '23456', 'Makanan', 2.00, 32.00, 22.00, 14.00, 0.00, '', 'Express', 28000.00, 0.00, 5000.00, 1000.00, 34000.00, 'COD', 'Belum Dibayar', '2026-02-13', NULL, NULL, NULL, '2026-02-11 02:56:59', '2026-02-11 02:56:59'),
 (31, 'SS-260211-0002', 1, '2026-02-11', 'Diproses', 'Dyah', '0895342227528', 'cangak', 'Jawa Timur', 'Kota Malang', 'Sukun', '35467', 'Dyah', '0895342227528', 'cangak', 'Jambi', 'Kota Malang', 'Sukun', '35467', 'Elektronik', 10.00, 26.00, 86.00, 34.00, 100000.00, '', 'Regular', 215390.00, 500.00, 15000.00, 0.00, 230890.00, 'COD', 'Belum Dibayar', '2026-02-14', NULL, NULL, NULL, '2026-02-11 07:31:01', '2026-02-11 07:31:01'),
-(32, 'SS-260211-0003', 1, '2026-02-11', 'Diproses', 'Fitri', '0895342227528', 'jl. Tanimbar 22', 'Jawa Timur', 'Kota Malang', 'Klojen', '44632', 'Fitri', '0895342227528', 'jl. Tanimbar 22', 'Jawa Timur', 'Kota Surabaya', 'Gubeng', '44632', 'Dokumen', 1.00, 12.00, 13.00, 14.00, 100000.00, '', 'Regular', 8000.00, 500.00, 5000.00, 0.00, 13500.00, '', 'Lunas', '2026-02-14', NULL, NULL, NULL, '2026-02-11 08:14:45', '2026-02-11 08:14:45');
+(32, 'SS-260211-0003', 1, '2026-02-11', 'Diproses', 'Fitri', '0895342227528', 'jl. Tanimbar 22', 'Jawa Timur', 'Kota Malang', 'Klojen', '44632', 'Fitri', '0895342227528', 'jl. Tanimbar 22', 'Jawa Timur', 'Kota Surabaya', 'Gubeng', '44632', 'Dokumen', 1.00, 12.00, 13.00, 14.00, 100000.00, '', 'Regular', 8000.00, 500.00, 5000.00, 0.00, 13500.00, '', 'Lunas', '2026-02-14', NULL, NULL, NULL, '2026-02-11 08:14:45', '2026-02-11 08:14:45'),
+(33, 'SS-260211-0004', 1, '2026-02-11', 'Diproses', 'pak samsul', '089999999812', 'jalan cengklek sukun', 'Jawa Timur', 'malang', 'sukun', '12345', 'om rian', '082345678123', 'Jl. Kesuma Bangsa No. 12', 'Kalimantan Timur', 'Samarinda', 'samarinda kota', '12233', 'Furniture', 25.00, 120.00, 60.00, 75.00, 1000000.00, '', 'Express', 2520000.00, 5000.00, 30000.00, 25000.00, 2580000.00, 'COD', 'Belum Dibayar', '2026-02-13', NULL, NULL, NULL, '2026-02-11 15:56:16', '2026-02-11 15:56:16');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tarif_dasar`
+-- Struktur dari tabel `tarif_dasar`
 --
 
 CREATE TABLE `tarif_dasar` (
@@ -150,7 +151,7 @@ CREATE TABLE `tarif_dasar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `tarif_dasar`
+-- Dumping data untuk tabel `tarif_dasar`
 --
 
 INSERT INTO `tarif_dasar` (`id`, `kota_asal`, `kota_tujuan`, `jenis_layanan`, `harga_per_kg`, `minimal_kg`, `biaya_minimum`, `status_aktif`, `created_at`, `updated_at`) VALUES
@@ -5948,46 +5949,37 @@ INSERT INTO `tarif_dasar` (`id`, `kota_asal`, `kota_tujuan`, `jenis_layanan`, `h
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tracking_history`
+-- Struktur dari tabel `tracking_pengiriman`
 --
 
-CREATE TABLE `tracking_history` (
-  `id` int(11) UNSIGNED NOT NULL,
-  `pengiriman_id` int(11) UNSIGNED NOT NULL,
-  `status` varchar(50) NOT NULL,
-  `lokasi` varchar(100) NOT NULL,
+CREATE TABLE `tracking_pengiriman` (
+  `id` int(11) NOT NULL,
+  `nomor_resi` varchar(50) NOT NULL,
+  `status` varchar(100) NOT NULL,
+  `lokasi` varchar(150) DEFAULT NULL,
   `keterangan` text DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `tracking_history`
---
-
-INSERT INTO `tracking_history` (`id`, `pengiriman_id`, `status`, `lokasi`, `keterangan`, `created_at`) VALUES
-(29, 30, 'Paket Diterima di Gudang', 'Jawa Timur Hub SoftSend', 'Paket telah diterima dan siap diproses', '2026-02-11 02:56:59'),
-(30, 31, 'Paket Diterima di Gudang', 'Jawa Timur Hub SoftSend', 'Paket telah diterima dan siap diproses', '2026-02-11 07:31:01'),
-(31, 32, 'Paket Diterima di Gudang', 'Jawa Timur Hub SoftSend', 'Paket telah diterima dan siap diproses', '2026-02-11 08:14:45');
+  `waktu` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `admin`
+-- Indeks untuk tabel `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `unique_email` (`email`);
 
 --
--- Indexes for table `pengaturan`
+-- Indeks untuk tabel `pengaturan`
 --
 ALTER TABLE `pengaturan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `pengiriman`
+-- Indeks untuk tabel `pengiriman`
 --
 ALTER TABLE `pengiriman`
   ADD PRIMARY KEY (`id`),
@@ -5997,68 +5989,62 @@ ALTER TABLE `pengiriman`
   ADD KEY `idx_tanggal` (`tanggal_kirim`);
 
 --
--- Indexes for table `tarif_dasar`
+-- Indeks untuk tabel `tarif_dasar`
 --
 ALTER TABLE `tarif_dasar`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `unique_rute` (`kota_asal`,`kota_tujuan`,`jenis_layanan`);
 
 --
--- Indexes for table `tracking_history`
+-- Indeks untuk tabel `tracking_pengiriman`
 --
-ALTER TABLE `tracking_history`
+ALTER TABLE `tracking_pengiriman`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `idx_pengiriman` (`pengiriman_id`);
+  ADD KEY `nomor_resi` (`nomor_resi`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `pengaturan`
+-- AUTO_INCREMENT untuk tabel `pengaturan`
 --
 ALTER TABLE `pengaturan`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `pengiriman`
+-- AUTO_INCREMENT untuk tabel `pengiriman`
 --
 ALTER TABLE `pengiriman`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- AUTO_INCREMENT for table `tarif_dasar`
+-- AUTO_INCREMENT untuk tabel `tarif_dasar`
 --
 ALTER TABLE `tarif_dasar`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5777;
 
 --
--- AUTO_INCREMENT for table `tracking_history`
+-- AUTO_INCREMENT untuk tabel `tracking_pengiriman`
 --
-ALTER TABLE `tracking_history`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+ALTER TABLE `tracking_pengiriman`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `pengiriman`
+-- Ketidakleluasaan untuk tabel `pengiriman`
 --
 ALTER TABLE `pengiriman`
   ADD CONSTRAINT `fk_pengiriman_admin` FOREIGN KEY (`admin_id`) REFERENCES `admin` (`id`) ON DELETE CASCADE;
-
---
--- Constraints for table `tracking_history`
---
-ALTER TABLE `tracking_history`
-  ADD CONSTRAINT `fk_tracking_pengiriman` FOREIGN KEY (`pengiriman_id`) REFERENCES `pengiriman` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
